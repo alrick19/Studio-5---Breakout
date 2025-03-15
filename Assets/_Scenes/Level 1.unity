@@ -593,6 +593,7 @@ MonoBehaviour:
   bricksContainer: {fileID: 1170594424}
   cameraShakeDuration: 1
   cameraShakeStrength: 0.5
+  brickDestroyEffect: {fileID: 6116264476169187559, guid: 6a9895990c68e418e8f02673f27b7d39, type: 3}
 --- !u!1001 &443665624
 PrefabInstance:
   m_ObjectHideFlags: 0
