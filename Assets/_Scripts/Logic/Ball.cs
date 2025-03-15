@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private float ballLaunchSpeed;
     [SerializeField] private float minBallBounceBackSpeed;
     [SerializeField] private float maxBallBounceBackSpeed;
+
     [Header("References")]
     [SerializeField] private Transform ballAnchor;
     [SerializeField] private Rigidbody rb;
@@ -14,8 +15,10 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.CompareTag("Paddle"))
+        if (other.gameObject.CompareTag("Paddle"))
         {
+            AudioManager.Instance?.PlaySFX(AudioManager.Instance.wall);
+
             Vector3 directionToFire = (transform.position - other.transform.position).normalized;
             float angleOfContact = Vector3.Angle(transform.forward, directionToFire);
             float returnSpeed = Mathf.Lerp(minBallBounceBackSpeed, maxBallBounceBackSpeed, angleOfContact / 90f);
@@ -23,10 +26,16 @@ public class Ball : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
             rb.AddForce(directionToFire * returnSpeed, ForceMode.Impulse);
         }
+        else if (other.gameObject.CompareTag("Environment"))
+        {
+            AudioManager.Instance?.PlaySFX(AudioManager.Instance.wall);
+        }
     }
 
     public void ResetBall()
     {
+        AudioManager.Instance?.PlaySFX(AudioManager.Instance.death);
+
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.isKinematic = true;
@@ -40,6 +49,9 @@ public class Ball : MonoBehaviour
     public void FireBall()
     {
         if (isBallActive) return;
+
+        AudioManager.Instance?.PlaySFX(AudioManager.Instance.shoot);
+
         transform.parent = null;
         rb.isKinematic = false;
         rb.AddForce(transform.forward * ballLaunchSpeed, ForceMode.Impulse);
