@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Studio-5---Breakout.sln"
+    "dotnet.defaultSolution": "Studio 5 - Breakout.sln"
 }
