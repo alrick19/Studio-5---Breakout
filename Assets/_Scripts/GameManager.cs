@@ -8,11 +8,13 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     [SerializeField] private float cameraShakeDuration = 1f;
     [SerializeField] private float cameraShakeStrength = 0.5f;
     [SerializeField] private GameObject brickDestroyEffect;
+
     private int currentBrickCount;
     private int totalBrickCount;
+    
 
     private void OnEnable()
-    {
+    {   
         InputHandler.Instance.OnFire.AddListener(FireBall);
         ball.ResetBall();
         totalBrickCount = bricksContainer.childCount;
@@ -32,7 +34,8 @@ public class GameManager : SingletonMonoBehavior<GameManager>
     public void OnBrickDestroyed(Vector3 position)
     {
         // fire audio here
-
+        AudioManager.Instance?.PlaySFX(AudioManager.Instance.brick);
+        
         // implement particle effect here
         Instantiate(brickDestroyEffect, position, Quaternion.Euler(-90, 0, 0));
 
