@@ -45,9 +45,9 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.31
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
   musicSource: {fileID: 1887731719228304930}
   SFXSource: {fileID: 949515367109632298}
   background: {fileID: 8300000, guid: 51a4f1157b7ff1449b5e5cf064d584c7, type: 3}
-  death: {fileID: 8300000, guid: 012c0df2e260d5d4590beaca9c1a37ff, type: 3}
+  death: {fileID: 8300000, guid: beb389d4c930d9b4bb00173e2f7d2c27, type: 3}
   wall: {fileID: 8300000, guid: cd2b5a4eab0b39b48baeecbb5743ec2c, type: 3}
   brick: {fileID: 8300000, guid: ea6190085e532954aac88653c3c8bfc9, type: 3}
   shoot: {fileID: 8300000, guid: be8957c3425ebf846bd445c33935900e, type: 3}

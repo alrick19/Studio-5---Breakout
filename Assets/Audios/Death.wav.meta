@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 012c0df2e260d5d4590beaca9c1a37ff
+guid: beb389d4c930d9b4bb00173e2f7d2c27
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
@@ -25,5 +25,5 @@ AssetOrigin:
   productId: 278024
   packageName: Regular Impact Sounds - Sound Effects
   packageVersion: 1.0
-  assetPath: Assets/ImpactSounds/Impact_Punch_Bag_01/SFX-impact-punch-bag-04_wav.wav
+  assetPath: Assets/ImpactSounds/Impact_Wood_Drum_01/SFX-impact-wood-drum-02_wav.wav
   uploadId: 663765
