@@ -16,3 +16,11 @@ Team members:
     - sound for missed ball
 - Audio Manager
     - Music added to level 1 & 2
+
+## Itch.io 
+
+[breakout3d](https://willg0115.itch.io/breakout3d)
+
+## Demo
+
+[Demo Video](https://youtu.be/TUcw3UAbshE)
